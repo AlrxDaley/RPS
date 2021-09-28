@@ -17,15 +17,17 @@ html{
     width: 300px;
     height: 100px;
     font-size: 35px;
+    color: white;
     margin-top: 20px;
     margin-left: 38%;
-    background-color: darkgray;
+    background-color: black;
     transition: duration 0.4s; ;
 
 }
 
 .levelButtons:hover{
     background:lightgray ;
+    color: black;
 }
 
 #menuList{
