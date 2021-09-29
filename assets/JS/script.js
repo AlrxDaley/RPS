@@ -1,9 +1,9 @@
 results = {
-    "12":{player:0,computer:0},"13":{player:0,computer:0},"14":{player:0,computer:0},"15":{player:0,computer:0},
-    "21":{player:0,computer:0},"23":{player:0,computer:0},"24":{player:0,computer:0},"25":{player:0,computer:0},
-    "31":{player:0,computer:0},"32":{player:0,computer:0},"34":{player:0,computer:0},"35":{player:0,computer:0},
-    "41":{player:0,computer:0},"42":{player:0,computer:0},"43":{player:0,computer:0},"45":{player:0,computer:0},
-    "51":{player:0,computer:0},"52":{player:0,computer:0},"53":{player:0,computer:0},"54":{player:0,computer:0},
+    "12":{"win":false},"13":{"win":true},"14":{"win":true},"15":{"win":false},
+    "21":{"win":true},"23":{"win":false},"24":{"win":false},"25":{"win":true},
+    "31":{"win":false},"32":{"win":true},"34":{"win":true},"35":{"win":false},
+    "41":{"win":false},"42":{"win":true},"43":{"win":false},"45":{"win":true},
+    "51":{"win":true},"52":{"win":false},"53":{"win":true},"54":{"win":false},
 }
 
 
@@ -24,5 +24,10 @@ function gettingTheComputersAnswer(){
 }
 
 function combiningResults(pAnswer,cAnswer){
-
+    result = pAnswer + cAnswer;
+    if(results[result].win == true){
+        console.log("player wins")
+    }else if (results[result].win == false){
+        console.log("Computer wins")
+    }
 }
