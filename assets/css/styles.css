@@ -5,6 +5,13 @@ html{
     margin: 0;
 }
 
+#lizard{
+    display: none;
+}
+#spock{
+    display: none;
+}
+
 #mainTitle {
     width: 100%;
     text-align: center;
@@ -13,7 +20,7 @@ html{
     text-decoration: underline;
 }
 
-.levelButtons{
+/*.levelButtons{
     width: 300px;
     height: 100px;
     font-size: 35px;
@@ -36,4 +43,4 @@ html{
     float: right;
     list-style: none;
     width: 100%;
-}
+}*/

@@ -5,10 +5,9 @@ results = {
     "41":{"win":false},"42":{"win":true},"43":{"win":false},"45":{"win":true},
     "51":{"win":true},"52":{"win":false},"53":{"win":true},"54":{"win":false},
 }
-var dificulty = 0
+var dificulty ;
 function dificultySelector(levelDificulty){
         dificulty = levelDificulty;
-        console.log(dificulty);
 }
 
 function runGame(playerAnswer){
@@ -23,17 +22,52 @@ function runGame(playerAnswer){
 function gettingTheComputersAnswer(){
     console.log()
     let answer = Math.floor(Math.random() * dificulty) + 1;
-    console.log(`computer = ${dificulty}`);
     answer.toString();
     return answer;
 }
 
 function combiningResults(pAnswer,cAnswer){
     result = pAnswer + cAnswer;
-    console.log(result);
     if(results[result].win == true){
         console.log("player wins")
     }else if (results[result].win == false){
         console.log("Computer wins")
+    }
+}
+
+function createButtonWhenLevelChangedTo1(){
+    var sbutton = document.getElementById("spock");
+    var lbutton = document.getElementById("lizard");
+
+    lbutton.style.display = "none";
+    sbutton.style.display = "none";
+}
+
+function createButtonWhenLevelChangedTo2(){
+    var button = document.getElementById("lizard");
+
+    if(button.style.display === "none"){
+        button.style.display = "inline";
+    }else{
+        button.style.display = "none";
+    }
+
+}
+
+function createButtonWhenLevelChangedTo3(){
+    var sbutton = document.getElementById("spock");
+
+    if(sbutton.style.display === "none"){
+        sbutton.style.display = "inline";
+    }else{
+        sbutton.style.display = "none";
+    }
+
+    var lbutton = document.getElementById("lizard");
+
+    if(lbutton.style.display === "none"){
+        lbutton.style.display = "inline";
+    }else{
+        lbutton.style.display = "none";
     }
 }
