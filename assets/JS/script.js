@@ -5,8 +5,11 @@ results = {
     "41":{"win":false},"42":{"win":true},"43":{"win":false},"45":{"win":true},
     "51":{"win":true},"52":{"win":false},"53":{"win":true},"54":{"win":false},
 }
-
-
+var dificulty = 0
+function dificultySelector(levelDificulty){
+        dificulty = levelDificulty;
+        console.log(dificulty);
+}
 
 function runGame(playerAnswer){
     computerAnswer = gettingTheComputersAnswer();
@@ -18,13 +21,16 @@ function runGame(playerAnswer){
 }
 
 function gettingTheComputersAnswer(){
-    let answer = Math.floor(Math.random() * 5) + 1;
+    console.log()
+    let answer = Math.floor(Math.random() * dificulty) + 1;
+    console.log(`computer = ${dificulty}`);
     answer.toString();
     return answer;
 }
 
 function combiningResults(pAnswer,cAnswer){
     result = pAnswer + cAnswer;
+    console.log(result);
     if(results[result].win == true){
         console.log("player wins")
     }else if (results[result].win == false){
