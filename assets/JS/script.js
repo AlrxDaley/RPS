@@ -26,48 +26,44 @@ function gettingTheComputersAnswer(){
     return answer;
 }
 
+var playerScore = 0;
+var computerScore = 0;
+
 function combiningResults(pAnswer,cAnswer){
     result = pAnswer + cAnswer;
     if(results[result].win == true){
-        console.log("player wins")
+        console.log("player wins");
+        document.getElementById("scoreTally").innerText(`Player Score:${++playerScore}`);
     }else if (results[result].win == false){
-        console.log("Computer wins")
+        console.log("Computer wins");
+        document.getElementById("scoreTally").innerHTML(`Computer Score:${++computerScore}`);
     }
 }
 
 function createButtonWhenLevelChangedTo1(){
+    console.log("working ?")
     var sbutton = document.getElementById("spock");
     var lbutton = document.getElementById("lizard");
 
-    lbutton.style.display = "none";
-    sbutton.style.display = "none";
+    sbutton.style.display = 'none';
+    lbutton.style.display = 'none';
+
 }
 
 function createButtonWhenLevelChangedTo2(){
-    var button = document.getElementById("lizard");
+    var lbutton = document.getElementById("lizard");
+    var sbutton = document.getElementById("spock");
 
-    if(button.style.display === "none"){
-        button.style.display = "inline";
-    }else{
-        button.style.display = "none";
-    }
+    lbutton.style.display = 'inline';
+    sbutton.style.display = 'none';
+
 
 }
 
 function createButtonWhenLevelChangedTo3(){
     var sbutton = document.getElementById("spock");
-
-    if(sbutton.style.display === "none"){
-        sbutton.style.display = "inline";
-    }else{
-        sbutton.style.display = "none";
-    }
-
     var lbutton = document.getElementById("lizard");
 
-    if(lbutton.style.display === "none"){
-        lbutton.style.display = "inline";
-    }else{
-        lbutton.style.display = "none";
-    }
+    lbutton.style.display = 'inline';
+    sbutton.style.display = 'inline'
 }
