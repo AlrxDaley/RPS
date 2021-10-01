@@ -6,6 +6,10 @@ results = {
     "51":{"win":true},"52":{"win":false},"53":{"win":true},"54":{"win":false},
 }
 var dificulty ;
+var playerScore = 0;
+var computerScore = 0;
+var drawScore = 0;
+
 function dificultySelector(levelDificulty){
         dificulty = levelDificulty;
 }
@@ -13,7 +17,7 @@ function dificultySelector(levelDificulty){
 function runGame(playerAnswer){
     computerAnswer = gettingTheComputersAnswer();
     if(playerAnswer == computerAnswer){
-        console.log("its a draw");
+        increaseDrawScore();
     }else{
         combiningResults(playerAnswer,computerAnswer);
     }
@@ -32,11 +36,9 @@ var computerScore = 0;
 function combiningResults(pAnswer,cAnswer){
     result = pAnswer + cAnswer;
     if(results[result].win == true){
-        console.log("player wins");
-        document.getElementById("scoreTally").innerText(`Player Score:${++playerScore}`);
+        increasePlayerScore();
     }else if (results[result].win == false){
-        console.log("Computer wins");
-        document.getElementById("scoreTally").innerHTML(`Computer Score:${++computerScore}`);
+        increaseComputerScore();
     }
 }
 
@@ -48,6 +50,9 @@ function createButtonWhenLevelChangedTo1(){
     sbutton.style.display = 'none';
     lbutton.style.display = 'none';
 
+    resetScore();
+
+
 }
 
 function createButtonWhenLevelChangedTo2(){
@@ -57,6 +62,7 @@ function createButtonWhenLevelChangedTo2(){
     lbutton.style.display = 'inline';
     sbutton.style.display = 'none';
 
+    resetScore();
 
 }
 
@@ -66,4 +72,32 @@ function createButtonWhenLevelChangedTo3(){
 
     lbutton.style.display = 'inline';
     sbutton.style.display = 'inline'
+
+    resetScore();
+
+}
+
+function increasePlayerScore(){
+    ++playerScore;
+    document.getElementById('pscore').innerText = playerScore;
+
+}
+
+function increaseComputerScore(){
+    ++computerScore;
+    document.getElementById('cscore').innerText = computerScore;
+}
+
+function increaseDrawScore(){
+    ++drawScore;
+    document.getElementById('dscore').innerText = drawScore;
+}
+
+function resetScore (){
+    playerScore = 0;
+    document.getElementById('pscore').innerText = playerScore;
+    computerScore = 0;
+    document.getElementById('cscore').innerText = computerScore;
+    drawScore = 0;
+    document.getElementById('dscore').innerText = drawScore;
 }
