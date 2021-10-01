@@ -11,25 +11,25 @@
 <body>
     <h1 id="mainTitle">Rock - Paper - Scissors - Lizard - Spock</h1>
     <ul id="menuList">
-        <li><button class="levelButtons" onclick="dificultySelector(3),createButtonWhenLevelChangedTo1()">Level 1</button></li>
-        <li><button class="levelButtons" onclick="dificultySelector(4),createButtonWhenLevelChangedTo2()">Level 2</button></li>
         <li><button class="levelButtons" onclick="dificultySelector(5),createButtonWhenLevelChangedTo3()">Level 3</button></li>
+        <li><button class="levelButtons" onclick="dificultySelector(4),createButtonWhenLevelChangedTo2()">Level 2</button></li>
+        <li><button class="levelButtons" onclick="dificultySelector(3),createButtonWhenLevelChangedTo1()">Level 1</button></li>
     </ul>
 
-    <div>
+    <div id="choose">
         <h2>Choose:</h2>
     </div>
 
     <div id="gameOptions">
-        <button onclick="runGame('1')" >Rock</button>
+        <button onclick="runGame('1')" class="options">Rock</button>
 
-        <button onclick="runGame('2')">Paper</button>
+        <button onclick="runGame('2')" class="options">Paper</button>
 
-        <button onclick="runGame('3')">Scissors</button>
+        <button onclick="runGame('3')" class="options">Scissors</button>
 
-        <button onclick="runGame('4')" id="lizard">Lizard</button>
+        <button onclick="runGame('4')" id="lizard" class="options">Lizard</button>
 
-        <button onclick="runGame('5')" id="spock">Spock</button>
+        <button onclick="runGame('5')" id="spock" class="options">Spock</button>
     </div>
     <div>
         <p>Player Score: <span id="pscore">0</span></p>

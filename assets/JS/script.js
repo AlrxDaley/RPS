@@ -5,7 +5,7 @@ results = {
     "41":{"win":false},"42":{"win":true},"43":{"win":false},"45":{"win":true},
     "51":{"win":true},"52":{"win":false},"53":{"win":true},"54":{"win":false},
 }
-var dificulty ;
+var dificulty = 3 ;
 var playerScore = 0;
 var computerScore = 0;
 var drawScore = 0;
