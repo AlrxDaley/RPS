@@ -10,10 +10,19 @@ var playerScore = 0;
 var computerScore = 0;
 var drawScore = 0;
 
+/**
+ * Sets the level dificulty
+ * @param {*} levelDificulty 
+ */
 function dificultySelector(levelDificulty){
         dificulty = levelDificulty;
 }
 
+/**
+ * Takes the number of the options selected by the user and checks if it makes the 
+ * computers answer, if it doesnt it sends both results to the combining results function.
+ * @param {*} playerAnswer 
+ */
 function runGame(playerAnswer){
     computerAnswer = gettingTheComputersAnswer();
     if(playerAnswer == computerAnswer){
@@ -22,17 +31,24 @@ function runGame(playerAnswer){
         combiningResults(playerAnswer,computerAnswer);
     }
 }
-
+/**
+ * Takes the global dificulty var and uses it with Math and random to 
+ * generate a random number that is assinged to an option within the game.
+ * @returns 
+ */
 function gettingTheComputersAnswer(){
-    console.log()
     let answer = Math.floor(Math.random() * dificulty) + 1;
     answer.toString();
     return answer;
 }
 
-var playerScore = 0;
-var computerScore = 0;
-
+/**
+ * Takes the players answer and the computers answer and combines them 
+ * then checks if the result is a key within the results dict and if the 
+ * information in the dict is true or false.
+ * @param {*} pAnswer 
+ * @param {*} cAnswer 
+ */
 function combiningResults(pAnswer,cAnswer){
     result = pAnswer + cAnswer;
     if(results[result].win == true){
@@ -42,6 +58,9 @@ function combiningResults(pAnswer,cAnswer){
     }
 }
 
+/**
+ * Hides the two extra options buttons and calls the resetScore function.
+ */
 function createButtonWhenLevelChangedTo1(){
     console.log("working ?")
     var sbutton = document.getElementById("spock");
@@ -55,6 +74,10 @@ function createButtonWhenLevelChangedTo1(){
 
 }
 
+/**
+ * Makes the lizard option visible and makes sure the spock option stays hidden
+ * aswell as calling the resetScore function.
+ */
 function createButtonWhenLevelChangedTo2(){
     var lbutton = document.getElementById("lizard");
     var sbutton = document.getElementById("spock");
@@ -66,6 +89,9 @@ function createButtonWhenLevelChangedTo2(){
 
 }
 
+/**
+ * Makes both buttons visible aswell as calling the resetScore function.
+ */
 function createButtonWhenLevelChangedTo3(){
     var sbutton = document.getElementById("spock");
     var lbutton = document.getElementById("lizard");
@@ -77,22 +103,37 @@ function createButtonWhenLevelChangedTo3(){
 
 }
 
+/**
+ * Adds 1 to the player score var and then assigns the var to 
+ * the inner text of the element.
+ */
 function increasePlayerScore(){
     ++playerScore;
     document.getElementById('pscore').innerText = playerScore;
 
 }
 
+/**
+ * Adds 1 to the computer score var and then assigns the var to 
+ * the inner text of the element.
+ */
 function increaseComputerScore(){
     ++computerScore;
     document.getElementById('cscore').innerText = computerScore;
 }
 
+/**
+ * Adds 1 to the draw score var and then assigns the var to 
+ * the inner text of the element.
+ */
 function increaseDrawScore(){
     ++drawScore;
     document.getElementById('dscore').innerText = drawScore;
 }
 
+/**
+ * resets all the global variables to 0 and then assigns them to the elements.
+ */
 function resetScore (){
     playerScore = 0;
     document.getElementById('pscore').innerText = playerScore;
