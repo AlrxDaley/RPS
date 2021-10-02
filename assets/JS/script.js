@@ -5,6 +5,10 @@ results = {
     "41":{"win":false},"42":{"win":true},"43":{"win":false},"45":{"win":true},
     "51":{"win":true},"52":{"win":false},"53":{"win":true},"54":{"win":false},
 }
+
+gameOptions = {
+    '1': "Rock", "2":"Paper", "3":"Scissors", "4":"Lizard", "5":"Spock"
+}
 var dificulty = 3 ;
 var playerScore = 0;
 var computerScore = 0;
@@ -27,8 +31,10 @@ function runGame(playerAnswer){
     computerAnswer = gettingTheComputersAnswer();
     if(playerAnswer == computerAnswer){
         increaseDrawScore();
+        displayChoices(playerAnswer,computerAnswer);
     }else{
         combiningResults(playerAnswer,computerAnswer);
+        displayChoices(playerAnswer,computerAnswer);
     }
 }
 /**
@@ -141,4 +147,19 @@ function resetScore (){
     document.getElementById('cscore').innerText = computerScore;
     drawScore = 0;
     document.getElementById('dscore').innerText = drawScore;
+}
+
+function displayChoices(pAnswer,cAnswer){
+    if(pAnswer in gameOptions){
+        let playersChoice = gameOptions[pAnswer];
+        console.log(playersChoice);
+        document.getElementById("playerChoice").innerText = playersChoice;
+    }
+
+    if(cAnswer in gameOptions){
+        let computersChoice = gameOptions[cAnswer];
+        console.log(computersChoice);
+        document.getElementById("computerChoice").innerText = computersChoice;
+    }
+
 }
