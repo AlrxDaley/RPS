@@ -16,13 +16,17 @@
         <li><button class="levelButtons" onclick="dificultySelector(3),createButtonWhenLevelChangedTo1()">Level 1</button></li>
     </ul>
 
-    <div>
-        <p>You chose: <span id="playerChoice"></span></p>
-        <p>Computer chose: <span id="computerChoice"></span></p>
+    <div id="choiceMenu">
+        <div class="boxed">
+            <p>You chose: <span id="playerChoice"></span></p>
+        </div>
+        <div class="boxed">
+            <p>Computer chose: <span id="computerChoice"></span></p>
+        </div>
     </div>
 
     <div id="choose">
-        <h2>Choose:</h2>
+        <h2>Choose Your Weapon:</h2>
     </div>
 
     <div id="gameOptions">
@@ -31,7 +35,8 @@
         <button onclick="runGame('2')" class="options">Paper</button>
 
         <button onclick="runGame('3')" class="options">Scissors</button>
-
+    </div>
+    <div id="extraGameOptions">
         <button onclick="runGame('4')" id="lizard" class="options">Lizard</button>
 
         <button onclick="runGame('5')" id="spock" class="options">Spock</button>

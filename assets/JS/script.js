@@ -149,6 +149,12 @@ function resetScore (){
     document.getElementById('dscore').innerText = drawScore;
 }
 
+/**
+ * displays the answers chosen by the player and computer by getting both answers and setting the inner text of 
+ * an element
+ * @param {*} pAnswer 
+ * @param {*} cAnswer 
+ */
 function displayChoices(pAnswer,cAnswer){
     if(pAnswer in gameOptions){
         let playersChoice = gameOptions[pAnswer];
