@@ -23,7 +23,7 @@ html{
 #menuList{
     list-style: none;
     margin-right: 27%;
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 .levelButtons{
@@ -33,7 +33,7 @@ html{
     margin-left: 30px;
     margin-right: 30px;
     font-size: 30px;
-    border-radius: 25px;
+    border-radius: 5px;
 
 }
 
@@ -55,7 +55,7 @@ html{
     padding: 20px;
     font-size: 30px;
     display: inline;
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 .options:hover{
@@ -90,8 +90,24 @@ html{
     border: solid black 2px;
     height: 40px;
     text-align: left;
-    border-radius: 25px;
+    border-radius: 5px;
     float: left;
     margin-left: 20px;
 }
 
+.scoreCounter{
+    width: 200px;
+    border: solid black 2px;
+    height: 30px;
+    font-size: 25px;
+    text-align: left;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 147px;
+    margin-top: 36px;
+}
+
+p{
+    margin-left: 20px;
+    margin-top: 11px;
+}
