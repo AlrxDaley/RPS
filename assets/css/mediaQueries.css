@@ -50,32 +50,33 @@
         margin-left: 100px;
     }
 }
-@media screen and (max-width: 360px) {
+
+@media screen and (max-width:414px) {
     #menuList{
-        display: flex;
-        flex-direction: column-reverse;
+        margin-right: 25%;
     }
 
     #choiceMenu{
-        margin-left: -309px;
+        margin-left: -284px;
     }
 
     #choose{
-        margin-left: 65px;
+        margin-left: 85px;
     }
 
     #gameOptions{
-        margin-left: 75px;
+        margin-left: 97px;
     }
     
     #extraGameOptions{
-        margin-left: 76px;
-        margin-top: 1px;
+        margin-left: 97px;
     }
 
     .scoreCounter{
-        margin-left: 75px;
+        margin-left: 97px;
+
     }
+    
 }
 
 @media screen and (max-width: 411px){
@@ -108,6 +109,63 @@
     
 }
 
+@media screen and (max-width: 375px) {
+    #menuList{
+        margin-right: 22%;
+    }
+
+    #choiceMenu{
+        margin-left: -300px;
+    }
+
+    #choose{
+        margin-left: 73px;
+    }
+
+    #gameOptions{
+        margin-left: 85px;
+    }
+    
+    #extraGameOptions{
+        margin-top: 0px;
+        margin-left: 85px;
+    }
+
+    .scoreCounter{
+        margin-left: 85px;
+    }
+    
+}
+
+@media screen and (max-width: 360px) {
+    #menuList{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #choiceMenu{
+        margin-left: -309px;
+    }
+
+    #choose{
+        margin-left: 65px;
+    }
+
+    #gameOptions{
+        margin-left: 75px;
+    }
+    
+    #extraGameOptions{
+        margin-left: 76px;
+        margin-top: 1px;
+    }
+
+    .scoreCounter{
+        margin-left: 75px;
+    }
+}
+
+
 @media screen and (max-width:320px) {
     #mainTitle{
         font-size: 40px;
@@ -123,6 +181,7 @@
     }
 
     #menuList{
+        margin-right: 25%;
     }
 
     #choiceMenu{
