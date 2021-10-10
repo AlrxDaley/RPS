@@ -1,27 +1,28 @@
 @media screen and (max-width:1600px) {
     #menuList{
-        margin-right: 34.5%;
+        margin-right: 31.5%;
     }
 
     #choiceMenu{
-        margin-left: 360px;
+        padding-top: 50px;
+        margin-left: 190px;
     }
 
     #choose{
-        padding-top: 30px;
-        margin-left: 850px;
+        padding-top: 50px;
+        margin-left: 680px;
     }
 
     #gameOptions{
-        margin-left: 655px;
+        margin-left: 485px;
     }
     
     #extraGameOptions{
-        margin-left: 760px;
+        margin-left: 590px;
     }
 
     .scoreCounter{
-        margin-left: 330px;
+        margin-left: 240px;
 
     }
 
