@@ -1,3 +1,33 @@
+@media screen and (max-width:1917px) {
+    #menuList{
+        margin-right: 34.5%;
+    }
+
+    #choiceMenu{
+        margin-left: 360px;
+    }
+
+    #choose{
+        padding-top: 30px;
+        margin-left: 850px;
+    }
+
+    #gameOptions{
+        margin-left: 655px;
+    }
+    
+    #extraGameOptions{
+        margin-left: 760px;
+    }
+
+    .scoreCounter{
+        margin-left: 330px;
+
+    }
+
+}
+
+
 @media screen and (max-width: 1500px) {
 
     #menuList{
@@ -5,23 +35,23 @@
     }
 
     #choiceMenu{
-        margin-left: 77px;
+        margin-left: 140px;
     }
     
     #choose{
-        margin-left: 560px;
+        margin-left: 625px;
     }
 
     #gameOptions{
-        margin-left: 370px;
+        margin-left: 430px;
     }
 
     #extraGameOptions{
-        margin-left: 474px;
+        margin-left: 530px;
     }
 
     .scoreCounter{
-        margin-left: 182px;
+        margin-left: 210px;
     }
 }
 
@@ -414,3 +444,4 @@
     }
     
 }
+
