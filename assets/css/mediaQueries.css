@@ -1,4 +1,4 @@
-@media screen and (max-width:1917px) {
+@media screen and (max-width:1600px) {
     #menuList{
         margin-right: 34.5%;
     }
@@ -53,6 +53,34 @@
     .scoreCounter{
         margin-left: 210px;
     }
+}
+
+@media screen and (max-width:1280px) {
+    #menuList{
+        margin-right: 26%;
+    }
+
+    #choiceMenu{
+        margin-left: 45px;
+    }
+
+    #choose{
+        margin-left: 525px;
+    }
+
+    #gameOptions{
+        margin-left: 333px;
+    }
+
+    #extraGameOptions{
+        margin-left: 430px;
+    }
+
+    .scoreCounter{
+        margin-left: 163px;
+    }
+
+    
 }
 
 @media screen and (max-width:1024px){
