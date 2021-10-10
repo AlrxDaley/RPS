@@ -56,6 +56,12 @@
     }
 }
 
+@media screen and (max-width: 1440px) {
+    #menuList{
+        margin-right: 28%;
+    }
+}
+
 @media screen and (max-width:1280px) {
     #menuList{
         margin-right: 26%;
