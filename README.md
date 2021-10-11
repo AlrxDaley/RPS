@@ -37,6 +37,11 @@ RPSLS is a web based rock paper scissors game. I created the game in such a way 
 
 ![Score Section](assets/Images/scoreDisplay.png)
 
+## Rules Section
+- This buttons pulls up the rules for the game using an alert.
+
+![Rules](assets/Images/rules.png)
+
 ## Features left to implement.
 - In the future i would like to add in some sort of animation of the two selections going head to head
 - In the future i would like to add s system where you only get a certain amount of tries and who ever has the most points wins overall.
@@ -56,17 +61,19 @@ RPSLS is a web based rock paper scissors game. I created the game in such a way 
 - The intended use of this section was to allow the user the option to pick which weapon/item they wanted and to increase the amount of options available when the leverl is increased. i made sure this worked by using the same group of people as before and getting them to play the game until the found a bug, they reported that the buttons worked consistantly.
 
 ## Score Section.
--The intened use of this section was to display the score of who won and how many draws there were. to test that it worked i used the same method as the option selector, the group found a bug which was when the game is first loaded the score wasnt going up you had to select a level before being able to play, to fic this bug i hard coded it so when the game is first loaded is automatically selects level 1 by default.
+- The intened use of this section was to display the score of who won and how many draws there were. to test that it worked i used the same method as the option selector, the group found a bug which was when the game is first loaded the score wasnt going up you had to select a level before being able to play, to fic this bug i hard coded it so when the game is first loaded is automatically selects level 1 by default.
+
+## Responsivity
+- when dealing with responsivity the first time i took the aproach of having lots if different media queries for each screen size, after testing and consulting with the test group i found this way to be long and not effective at all. so to fix the problem i went back throuhg my code and changed the structure of my css and html to better suit responsivity. after a few trial and errors i was able to get the reponsivity working so i went back the the test group and consulted with them and let them test it, they reported it was a major improvment to the first attempt and works as it should.
 
 # Validator Testing.
 
 ## HTML
 ![html validated](assets/Images/htmlVal.png)
-## CSS
-First is for default styling and second is for media queries
 
+## CSS
 ![css validated](assets/Images/cssVal.png)
-![media qeuries](assets/Images/mediaVal.png)
+
 ## JS
 ![js validated](assets/Images/jsVal.png)
 
@@ -85,5 +92,8 @@ This section should describe the process you went through to deploy the project 
 
 ## Credits/Content
   Credit to Code Institue for the Development wording
+
   The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+
+
 
