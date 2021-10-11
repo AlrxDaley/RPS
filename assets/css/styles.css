@@ -49,6 +49,7 @@ li{
     margin-right: 15px;
     font-size: 30px;
     border-radius: 5px;
+    color: black;
 }
 
 .levelButtons:hover{
@@ -102,6 +103,7 @@ li{
     font-size: 30px;
     display: inline;
     border-radius: 5px;
+    color: black;
 }
 
 .options:hover{
@@ -138,6 +140,7 @@ li{
     display: inline-block;
     font-size: 20px;
     width: 200px;
+    color: black;
 }
 
 /* Media Queires */
