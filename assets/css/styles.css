@@ -4,7 +4,7 @@ html{
     height:100% ;
     padding: 0;
     margin: 0;
-    background-image: linear-gradient(rgb(198, 241, 255), rgb(95, 168, 192));
+    background: linear-gradient(rgb(198, 241, 255), rgb(95, 168, 192)) no-repeat center center fixed;
 }
 p{
     margin-left: 20px;
