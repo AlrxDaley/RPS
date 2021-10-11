@@ -1,14 +1,14 @@
-results = {
+var results = {
     "12":{"win":false},"13":{"win":true},"14":{"win":true},"15":{"win":false},
     "21":{"win":true},"23":{"win":false},"24":{"win":false},"25":{"win":true},
     "31":{"win":false},"32":{"win":true},"34":{"win":true},"35":{"win":false},
     "41":{"win":false},"42":{"win":true},"43":{"win":false},"45":{"win":true},
     "51":{"win":true},"52":{"win":false},"53":{"win":true},"54":{"win":false},
-}
+};
 
-gameOptions = {
+var gameOptions = {
     '1': "Rock", "2":"Paper", "3":"Scissors", "4":"Lizard", "5":"Spock"
-}
+};
 var dificulty = 3 ;
 var playerScore = 0;
 var computerScore = 0;
@@ -28,7 +28,7 @@ function dificultySelector(levelDificulty){
  * @param {*} playerAnswer 
  */
 function runGame(playerAnswer){
-    computerAnswer = gettingTheComputersAnswer();
+    var computerAnswer = gettingTheComputersAnswer();
     if(playerAnswer == computerAnswer){
         increaseDrawScore();
         displayChoices(playerAnswer,computerAnswer);
@@ -43,7 +43,7 @@ function runGame(playerAnswer){
  * @returns 
  */
 function gettingTheComputersAnswer(){
-    let answer = Math.floor(Math.random() * dificulty) + 1;
+    var answer = Math.floor(Math.random() * dificulty) + 1;
     answer.toString();
     return answer;
 }
@@ -56,7 +56,7 @@ function gettingTheComputersAnswer(){
  * @param {*} cAnswer 
  */
 function combiningResults(pAnswer,cAnswer){
-    result = pAnswer + cAnswer;
+    var result = pAnswer + cAnswer;
     if(results[result].win == true){
         increasePlayerScore();
     }else if (results[result].win == false){
@@ -68,7 +68,7 @@ function combiningResults(pAnswer,cAnswer){
  * Hides the two extra options buttons and calls the resetScore function.
  */
 function createButtonWhenLevelChangedTo1(){
-    console.log("working ?")
+    dificultySelector(3)
     var sbutton = document.getElementById("spock");
     var lbutton = document.getElementById("lizard");
 
@@ -85,6 +85,7 @@ function createButtonWhenLevelChangedTo1(){
  * aswell as calling the resetScore function.
  */
 function createButtonWhenLevelChangedTo2(){
+    dificultySelector(4)
     var lbutton = document.getElementById("lizard");
     var sbutton = document.getElementById("spock");
 
@@ -99,11 +100,12 @@ function createButtonWhenLevelChangedTo2(){
  * Makes both buttons visible aswell as calling the resetScore function.
  */
 function createButtonWhenLevelChangedTo3(){
+    dificultySelector(5)
     var sbutton = document.getElementById("spock");
     var lbutton = document.getElementById("lizard");
 
     lbutton.style.display = 'inline';
-    sbutton.style.display = 'inline'
+    sbutton.style.display = 'inline';
 
     resetScore();
 
@@ -157,13 +159,13 @@ function resetScore (){
  */
 function displayChoices(pAnswer,cAnswer){
     if(pAnswer in gameOptions){
-        let playersChoice = gameOptions[pAnswer];
+        var playersChoice = gameOptions[pAnswer];
         console.log(playersChoice);
         document.getElementById("playerChoice").innerText = playersChoice;
     }
 
     if(cAnswer in gameOptions){
-        let computersChoice = gameOptions[cAnswer];
+        var computersChoice = gameOptions[cAnswer];
         console.log(computersChoice);
         document.getElementById("computerChoice").innerText = computersChoice;
     }

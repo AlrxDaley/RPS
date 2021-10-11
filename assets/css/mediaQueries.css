@@ -168,7 +168,7 @@
     }
 
     .scoreCounter{
-        margin-left: 40px;
+        margin-left: 38px;
     }
     
 }
@@ -395,16 +395,16 @@
     }
 
     #gameOptions{
-        margin-left: 85px;
+        margin-left: 90px;
     }
     
     #extraGameOptions{
         margin-top: 0px;
-        margin-left: 85px;
+        margin-left: 90px;
     }
 
     .scoreCounter{
-        margin-left: 85px;
+        margin-left: 90px;
     }
     
 }
@@ -467,11 +467,11 @@
     }
 
     #gameOptions{
-        margin-left: 50px;
+        margin-left: 60px;
     }
     
     #extraGameOptions{
-        margin-left: 50px;
+        margin-left: 60px;
     }
 
     .scoreCounter{
