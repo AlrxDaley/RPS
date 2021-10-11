@@ -367,16 +367,16 @@
     }
 
     #gameOptions{
-        margin-left: 97px;
+        margin-left: 105px;
     }
     
     #extraGameOptions{
         margin-top: 0px;
-        margin-left: 97px;
+        margin-left: 105px;
     }
 
     .scoreCounter{
-        margin-left: 97px;
+        margin-left: 105px;
     }
     
 }
