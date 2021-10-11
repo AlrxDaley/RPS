@@ -13,6 +13,8 @@ var dificulty = 3 ;
 var playerScore = 0;
 var computerScore = 0;
 var drawScore = 0;
+var playersChoice ="";
+var computerChoice ="";
 
 /**
  * Sets the level dificulty
@@ -76,6 +78,7 @@ function createButtonWhenLevelChangedTo1(){
     lbutton.style.display = 'none';
 
     resetScore();
+    resetChoosen();
 
 
 }
@@ -93,6 +96,7 @@ function createButtonWhenLevelChangedTo2(){
     sbutton.style.display = 'none';
 
     resetScore();
+    resetChoosen();
 
 }
 
@@ -108,6 +112,7 @@ function createButtonWhenLevelChangedTo3(){
     sbutton.style.display = 'inline';
 
     resetScore();
+    resetChoosen();
 
 }
 
@@ -151,6 +156,15 @@ function resetScore (){
     document.getElementById('dscore').innerText = drawScore;
 }
 
+function resetChoosen(){
+    playersChoice = "";
+    document.getElementById("playerChoice").innerText = playersChoice;
+
+    computersChoice ="";
+    document.getElementById("computerChoice").innerText = computersChoice;
+
+}
+
 /**
  * displays the answers chosen by the player and computer by getting both answers and setting the inner text of 
  * an element
@@ -170,4 +184,19 @@ function displayChoices(pAnswer,cAnswer){
         document.getElementById("computerChoice").innerText = computersChoice;
     }
 
+}
+
+function displayRules(){
+    alert(`
+    -------RULES--------
+    1.Scissors cuts Paper
+    2.Paper covers Rock
+    3.Rock crushes Lizard
+    4.Lizard poisons Spock
+    5.Spock smashes Scissors
+    6.Scissors decapitates Lizard
+    7.Lizard eats Paper
+    8.Paper disproves Spock
+    9.Spock vaporizes Rock
+    10.Rock crushes Scissors`)
 }

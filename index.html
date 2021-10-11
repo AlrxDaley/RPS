@@ -11,24 +11,19 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <h1 id="mainTitle">Rock - Paper - Scissors - Lizard - Spock</h1>
-    <ul id="menuList">
-        <li><button class="levelButtons" onclick="dificultySelector(5),createButtonWhenLevelChangedTo3()">Level 3</button></li>
-        <li><button class="levelButtons" onclick="dificultySelector(4),createButtonWhenLevelChangedTo2()">Level 2</button></li>
-        <li><button class="levelButtons" onclick="dificultySelector(3),createButtonWhenLevelChangedTo1()">Level 1</button></li>
-    </ul>
-
-    <div id="choiceMenu">
-        <div class="boxed">
-            <p>You chose: <span id="playerChoice"></span></p>
-        </div>
-        <div class="boxed">
-            <p>Computer chose: <span id="computerChoice"></span></p>
-        </div>
+    <div id="titleContainer">
+        <h1 id="mainTitle">Rock - Paper - Scissors - Lizard - Spock</h1>
+    </div>
+    <div id="mainLevelContainer">
+        <ul>
+            <li><button class="levelButtons" onclick="dificultySelector(3),createButtonWhenLevelChangedTo1()">Level 1</button></li>
+            <li><button class="levelButtons" onclick="dificultySelector(4),createButtonWhenLevelChangedTo2()">Level 2</button></li>
+            <li><button class="levelButtons" onclick="dificultySelector(5),createButtonWhenLevelChangedTo3()">Level 3</button></li>
+        </ul>
     </div>
 
     <div id="choose">
-        <h2>Choose Your Weapon:</h2>
+        <h2>Choose Your Object:</h2>
     </div>
 
     <div id="gameOptions">
@@ -43,10 +38,32 @@
 
         <button onclick="runGame('5')" id="spock" class="options">Spock <i class="far fa-hand-spock"></i></button>
     </div>
+
+    <div id="choiceMenu">
+        <ul>
+            <li>        
+                <div class="boxed">
+                    <p>You picked: <span id="playerChoice"></span></p>
+                </div>
+            </li>
+            <li>
+                <div class="boxed">
+                    <p>Computer picked: <span id="computerChoice"></span></p>
+                </div>
+            </li>
+        </ul>
+
+        
+    </div>
+
     <div id="scoreOptions">
         <p class="scoreCounter">Player Score: <span id="pscore">0</span></p>
         <p class="scoreCounter">Computer Score: <span id="cscore">0</span></p>
         <p class="scoreCounter">Draw Score: <span id="dscore">0</span></p>
+    </div>
+
+    <div id="rulesContainer">
+        <button onclick="displayRules()" id="rulesButton">Rules</button>
     </div>
 
     <script src="assets/JS/script.js"></script>
