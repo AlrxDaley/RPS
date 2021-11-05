@@ -1,28 +1,205 @@
 var results = {
-    "12":{"win":false},"13":{"win":true},"14":{"win":true},"15":{"win":false},"16":{"win":true},"17":{"win":false},"18":{"win":false},"19":{"win":false},
-    "21":{"win":true},"23":{"win":false},"24":{"win":false},"25":{"win":true},"26":{"win":false},"27":{"win":false},"28":{"win":false},"29":{"win":false},
-    "31":{"win":false},"32":{"win":true},"34":{"win":true},"35":{"win":false},"36":{"win":false},"37":{"win":false},"38":{"win":false},"39":{"win":false},
-    "41":{"win":false},"42":{"win":true},"43":{"win":false},"45":{"win":true},
-    "51":{"win":true},"52":{"win":false},"53":{"win":true},"54":{"win":false},
+    "12": {
+        "win": false
+    },
+    "13": {
+        "win": true
+    },
+    "14": {
+        "win": true
+    },
+    "15": {
+        "win": false
+    },
+    "16": {
+        "win": true
+    },
+    "17": {
+        "win": false
+    },
+    "18": {
+        "win": false
+    },
+    "19": {
+        "win": true
+    },
+    "21": {
+        "win": true
+    },
+    "23": {
+        "win": false
+    },
+    "24": {
+        "win": false
+    },
+    "25": {
+        "win": true
+    },
+    "26": {
+        "win": false
+    },
+    "27": {
+        "win": true
+    },
+    "28": {
+        "win": true
+    },
+    "29": {
+        "win": false
+    },
+    "31": {
+        "win": false
+    },
+    "32": {
+        "win": true
+    },
+    "34": {
+        "win": true
+    },
+    "35": {
+        "win": false
+    },
+    "36": {
+        "win": true
+    },
+    "37": {
+        "win": false
+    },
+    "38": {
+        "win": true
+    },
+    "39": {
+        "win": false
+    },
+    "41": {
+        "win": false
+    },
+    "42": {
+        "win": true
+    },
+    "43": {
+        "win": false
+    },
+    "45": {
+        "win": true
+    },
+    "51": {
+        "win": true
+    },
+    "52": {
+        "win": false
+    },
+    "53": {
+        "win": true
+    },
+    "54": {
+        "win": false
+    },
+    "61": {
+        "win": false
+    },
+    "62": {
+        "win": true
+    },
+    "63": {
+        "win": false
+    },
+    "67": {
+        "win": true
+    },
+    "68": {
+        "win": true
+    },
+    "69": {
+        "win": false
+    },
+    "71": {
+        "win": true
+    },
+    "72": {
+        "win": false
+    },
+    "73": {
+        "win": true
+    },
+    "76": {
+        "win": false
+    },
+    "78": {
+        "win": false
+    },
+    "79": {
+        "win": true
+    },
+    "81": {
+        "win": true
+    },
+    "82": {
+        "win": false
+    },
+    "83": {
+        "win": false
+    },
+    "86": {
+        "win": false
+    },
+    "87": {
+        "win": true
+    },
+    "89": {
+        "win": true
+    },
+    "91": {
+        "win": false
+    },
+    "92": {
+        "win": true
+    },
+    "93": {
+        "win": true
+    },
+    "96": {
+        "win": true
+    },
+    "97": {
+        "win": false
+    },
+    "98": {
+        "win": false
+    },
 }
 
 var gameOptions = {
-    '1': "Rock", "2":"Paper", "3":"Scissors", "4":"Lizard", "5":"Spock" ,"6":"Sponge", "7":"Water", "8":"Air", "9":"Fire"
+    '1': "Rock",
+    "2": "Paper",
+    "3": "Scissors",
+    "4": "Lizard",
+    "5": "Spock",
+    "6": "Sponge",
+    "7": "Water",
+    "8": "Air",
+    "9": "Fire"
 };
 
-var dificulty = 3 ;
+var levelDifficultyOptions = {
+    "3": [1, 2, 3],
+    "4": [1, 2, 3, 4, 5],
+    "7": [1, 2, 3, 6, 7, 8, 9]
+};
+
+var difficulty = 3;
 var playerScore = 0;
 var computerScore = 0;
 var drawScore = 0;
-var playersChoice ="";
-var computerChoice ="";
+var playersChoice = "";
+var computerChoice = "";
 
 /**
  * Sets the level dificulty
  * @param {*} levelDificulty 
  */
-function dificultySelector(levelDificulty){
-        dificulty = levelDificulty;
+function dificultySelector(levelDificulty) {
+    difficulty = levelDificulty;
 }
 
 /**
@@ -30,14 +207,14 @@ function dificultySelector(levelDificulty){
  * computers answer, if it doesnt it sends both results to the combining results function.
  * @param {*} playerAnswer 
  */
-function runGame(playerAnswer){
+function runGame(playerAnswer) {
     var computerAnswer = gettingTheComputersAnswer();
-    if(playerAnswer == computerAnswer){
+    if (playerAnswer == computerAnswer) {
         increaseDrawScore();
-        displayChoices(playerAnswer,computerAnswer);
-    }else{
-        combiningResults(playerAnswer,computerAnswer);
-        displayChoices(playerAnswer,computerAnswer);
+        displayChoices(playerAnswer, computerAnswer);
+    } else {
+        combiningResults(playerAnswer, computerAnswer);
+        displayChoices(playerAnswer, computerAnswer);
     }
 }
 
@@ -46,9 +223,9 @@ function runGame(playerAnswer){
  * generate a random number that is assinged to an option within the game.
  * @returns 
  */
-function gettingTheComputersAnswer(){
-    var answer = Math.floor(Math.random() * dificulty) + 1;
-    answer.toString();
+function gettingTheComputersAnswer() {
+    var index = Math.floor(Math.random() * difficulty);
+    var answer = levelDifficultyOptions[difficulty.toString()][index].toString();
     return answer;
 }
 
@@ -59,19 +236,21 @@ function gettingTheComputersAnswer(){
  * @param {*} pAnswer 
  * @param {*} cAnswer 
  */
-function combiningResults(pAnswer,cAnswer){
+function combiningResults(pAnswer, cAnswer) {
     var result = pAnswer + cAnswer;
-    if(results[result].win == true){
+    console.log(result)
+    if (results[result].win == true) {
         increasePlayerScore();
-    }else if (results[result].win == false){
+    } else if (results[result].win == false) {
         increaseComputerScore();
     }
+
 }
 
 /**
  * Hides the two extra options buttons and calls the resetScore function.
  */
-function createButtonWhenLevelChangedTo1(){
+function createButtonWhenLevelChangedTo1() {
     dificultySelector(3)
     var sbutton = document.getElementById("spock");
     var lbutton = document.getElementById("lizard");
@@ -100,7 +279,7 @@ function createButtonWhenLevelChangedTo1(){
  * Makes the lizard option visible and makes sure the spock option stays hidden
  * aswell as calling the resetScore function.
  */
-function createButtonWhenLevelChangedTo2(){
+function createButtonWhenLevelChangedTo2() {
     dificultySelector(4)
     var lbutton = document.getElementById("lizard");
     var sbutton = document.getElementById("spock");
@@ -127,8 +306,8 @@ function createButtonWhenLevelChangedTo2(){
 /**
  * Makes both buttons visible aswell as calling the resetScore function.
  */
-function createButtonWhenLevelChangedTo3(){
-    dificultySelector(5)
+function createButtonWhenLevelChangedTo3() {
+    dificultySelector(7)
     var sbutton = document.getElementById("spock");
     var lbutton = document.getElementById("lizard");
 
@@ -155,7 +334,7 @@ function createButtonWhenLevelChangedTo3(){
  * Adds 1 to the player score var and then assigns the var to 
  * the inner text of the element.
  */
-function increasePlayerScore(){
+function increasePlayerScore() {
     ++playerScore;
     document.getElementById('pscore').innerText = playerScore;
 
@@ -165,7 +344,7 @@ function increasePlayerScore(){
  * Adds 1 to the computer score var and then assigns the var to 
  * the inner text of the element.
  */
-function increaseComputerScore(){
+function increaseComputerScore() {
     ++computerScore;
     document.getElementById('cscore').innerText = computerScore;
 }
@@ -174,7 +353,7 @@ function increaseComputerScore(){
  * Adds 1 to the draw score var and then assigns the var to 
  * the inner text of the element.
  */
-function increaseDrawScore(){
+function increaseDrawScore() {
     ++drawScore;
     document.getElementById('dscore').innerText = drawScore;
 }
@@ -182,7 +361,7 @@ function increaseDrawScore(){
 /**
  * resets all the global variables to 0 and then assigns them to the elements.
  */
-function resetScore (){
+function resetScore() {
     playerScore = 0;
     document.getElementById('pscore').innerText = playerScore;
     computerScore = 0;
@@ -191,11 +370,11 @@ function resetScore (){
     document.getElementById('dscore').innerText = drawScore;
 }
 
-function resetChoosen(){
+function resetChoosen() {
     playersChoice = "";
     document.getElementById("playerChoice").innerText = playersChoice;
 
-    computersChoice ="";
+    computersChoice = "";
     document.getElementById("computerChoice").innerText = computersChoice;
 
 }
@@ -206,15 +385,15 @@ function resetChoosen(){
  * @param {*} pAnswer 
  * @param {*} cAnswer 
  */
-function displayChoices(pAnswer,cAnswer){
-    if(pAnswer in gameOptions){
+function displayChoices(pAnswer, cAnswer) {
+    if (pAnswer in gameOptions) {
         console.log("true")
         var playersChoice = gameOptions[pAnswer];
         console.log(playersChoice);
         document.getElementById("playerChoice").innerText = playersChoice;
     }
 
-    if(cAnswer in gameOptions){
+    if (cAnswer in gameOptions) {
         var computersChoice = gameOptions[cAnswer];
         console.log(computersChoice);
         document.getElementById("computerChoice").innerText = computersChoice;
@@ -222,7 +401,7 @@ function displayChoices(pAnswer,cAnswer){
 
 }
 
-function displayRules(){
+function displayRules() {
     alert(`
     -------RULES--------
     ------Level 1-------
@@ -248,5 +427,5 @@ function displayRules(){
     5.Air blows out fire, erodes rock and evaporates water
     6.Water erodes rock, puts out fire and rusts scissors
     `)
-    
+
 }
