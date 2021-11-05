@@ -202,6 +202,9 @@ function displayRules(){
     alert(`
     -------RULES--------
     ------Level 1-------
+    1.Scissors cuts Paper
+    2.Paper covers Rock
+    3.Rock crushes Scissors
     ------Level 2-------
     1.Scissors cuts Paper
     2.Paper covers Rock
@@ -214,6 +217,12 @@ function displayRules(){
     9.Spock vaporizes Rock
     10.Rock crushes Scissors
     ------Level 3-------
+    1.Rock pounds out fire,crushes scissors and sponge
+    2.Fire melts scissors, burns paper and sponge
+    3.Sponge soaks paper, uses air pockets and absorbs water
+    4.Paper fans air, covers rock, floats on water
+    5.Air blows out fire, erodes rock and evaporates water
+    6.Water erodes rock, puts out fire and rusts scissors
     `)
     
 }
