@@ -1,15 +1,31 @@
-# Rock Paper Scissors Lizard Spock
+# Rock Paper Scissors
 
-RPSLS is a web based rock paper scissors game. I created the game in such a way to have a very broard target audience so all ages could understand the concept easliy and play RPS with differeing levels of dificlulty
+RPS is a web based rock paper scissors game. I created the game in such a way to have a very broard target audience so all ages could understand the concept easliy and play RPS with differeing levels of dificlulty
 
-![Responsive Screenshot](assets/Images/responsivity.png)
+## Purpose
+
+The purpose of this website was to allow people to play rock paper scissors agaisnt a computer with increasing difficulty depending on the level selected.
+the value to the user is that is it simple and intuitive and allows all ages play rock paper scissors online against the computer.
+
+### Possible Scenarios for user value
+
+- You could be an only child and want to play rock paper scissors but all of your friends are busy, but with this rock paper scissors website you're
+able to play for however long you want and when you want.
+
+- You could be a teenager that loved to play rock paper scissors with your friends but wanted more of a challenge, with this rock paper scissors website you're able to play at different difficulties depending on whish level you select.
+
+- You could love to play rps but all your friends cheat and dont play properly, whit this rock paper scissors website the computer you play agaisnt is incapable of cheating and every level is balanced and is all relient on chance.
+
+
+
+![Responsive Screenshot](assets/images/responsivity.png)
 
 # Features
 
 ## The RPSLS Heading/Title.
-- Located at the top of the page the title of the game is easy to find and gives a good breif description of what that game is.
+- Located at the top of the page the title of the game is easy to find and gives an idea of what the web page is about.
 
-![Title](assets/Images/title.png)
+![Title](assets/images/title.png)
 
 ## Level selection section.
 - This area allows the user to select the level/difficulty of the game.
@@ -17,36 +33,60 @@ RPSLS is a web based rock paper scissors game. I created the game in such a way 
 - The user will also be able to easily identify which level is harder and which level is easier by the button label.
 - By default the level is set to 1
 
-![Level Selector](assets/Images/levelSelect.png)
+![Level Selector](assets/images/levelSelect.png)
 
 ## Display Section.
 - This area shows the user what option they have selected and what option the computer has selected.
 - This shows the user why they won or lost the game.
 
-![Display Slection](assets/Images/choiceDisplay.png)
+![Display Slection](assets/images/choiceDisplay.png)
 
 ## Option Section.
 - This area is where the user selects the weapon/item they would like to use.
 - As you increase the levels more item options become available.
 
-![Option Selector](assets/Images/optionSelector.png)
+![Option Selector](assets/images/optionSelector.png)
+
+![Option Selector](assets/images/optionSelection2.png)
 
 ## Score Section.
 - This area is where the outcome of each game is stored. player win , computer win and draw
 - This area is reset when the level/dificulty is changed.
 
-![Score Section](assets/Images/scoreDisplay.png)
+![Score Section](assets/images/scoreDisplay.png)
 
 ## Rules Section
 - This buttons pulls up the rules for the game using an alert.
 
-![Rules](assets/Images/rules.png)
+![Rules](assets/images/rules.png)
 
 ## Features left to implement.
 - In the future i would like to add in some sort of animation of the two selections going head to head
 - In the future i would like to add s system where you only get a certain amount of tries and who ever has the most points wins overall.
 
+# WireFrames.
+
+![WireFrame section](assets/images/wireframe1.png)
+
+![WireFrame section](assets/images/wireframe2.png)
+
+![WireFrame section](assets/images/wireframe3.png)
+
 # Testing.
+
+## Steps i took for testing
+
+Functional Testing
+  - Identifying if the program does what its meant to do
+  - Testing all the inputs are working and out putting the right data
+
+Usibility Test
+  - I hired a group of people to use the website and give feedback on what they thought could be improved and
+    if they thought it met the criteria i set out to acheive.
+  - I then took the results and fixed / changed what was wrong and then repeated this proccess.
+
+Responsivity testing
+  - This stage was sort of the same / mixed with the pervious stage as it was having people test the web page on different devices and report what they found out.
 
 ## Heading/Title
 - The intended use of the title was to give the user an idea of what the games about, i confimred that it gave the right impression by asking a group of people to describe what the game was about after seeing the title and all of there answers were similar and what i had intended.
@@ -64,24 +104,22 @@ RPSLS is a web based rock paper scissors game. I created the game in such a way 
 - The intened use of this section was to display the score of who won and how many draws there were. to test that it worked i used the same method as the option selector, the group found a bug which was when the game is first loaded the score wasnt going up you had to select a level before being able to play, to fic this bug i hard coded it so when the game is first loaded is automatically selects level 1 by default.
 
 ## Responsivity
-- when dealing with responsivity the first time i took the aproach of having lots if different media queries for each screen size, after testing and consulting with the test group i found this way to be long and not effective at all. so to fix the problem i went back throuhg my code and changed the structure of my css and html to better suit responsivity. after a few trial and errors i was able to get the reponsivity working so i went back the the test group and consulted with them and let them test it, they reported it was a major improvment to the first attempt and works as it should.
+- when dealing with responsivity the first time i took the aproach of having lots if different media queries for each screen size, after testing and consulting with the test group i found this way to be long and not effective at all. so to fix the problem i went back throuhg my code and changed the structure of my css and html to better suit responsivity. after a few trial and errors i was able to get the reponsivity working so i went back the the test group and consulted with them and let them test it, they reported it was a major improvement to the first attempt and works as it should.
 
 # Validator Testing.
 
 ## HTML
-![html validated](assets/Images/htmlVal.png)
+![html validated](assets/images/htmlVal.png)
 
 ## CSS
-![css validated](assets/Images/cssVal.png)
+![css validated](assets/images/cssVal.png)
 
 ## JS
-![js validated](assets/Images/jsVal.png)
+![js validated](assets/images/jsVal.png)
 
 The Unused variables arnt used within the JS but are used within the HTML
 
 ## Deployment
-
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
 
 - The site was deployed to GitHub pages. The steps to deploy are as follows: 
   - In the GitHub repository, navigate to the Settings tab 
