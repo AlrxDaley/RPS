@@ -9,6 +9,7 @@ var results = {
 var gameOptions = {
     '1': "Rock", "2":"Paper", "3":"Scissors", "4":"Lizard", "5":"Spock"
 };
+
 var dificulty = 3 ;
 var playerScore = 0;
 var computerScore = 0;
@@ -39,6 +40,7 @@ function runGame(playerAnswer){
         displayChoices(playerAnswer,computerAnswer);
     }
 }
+
 /**
  * Takes the global dificulty var and uses it with Math and random to 
  * generate a random number that is assinged to an option within the game.
@@ -93,7 +95,7 @@ function createButtonWhenLevelChangedTo2(){
     var sbutton = document.getElementById("spock");
 
     lbutton.style.display = 'inline';
-    sbutton.style.display = 'none';
+    sbutton.style.display = 'inline';
 
     resetScore();
     resetChoosen();
@@ -108,8 +110,18 @@ function createButtonWhenLevelChangedTo3(){
     var sbutton = document.getElementById("spock");
     var lbutton = document.getElementById("lizard");
 
-    lbutton.style.display = 'inline';
-    sbutton.style.display = 'inline';
+    lbutton.style.display = 'none';
+    sbutton.style.display = 'none';
+
+
+    var abutton = document.getElementById("air")
+    var spbutton = document.getElementById("sponge")
+    var wbutton = document.getElementById("water")
+    var fbutton = document.getElementById("fire")
+
+    abutton.style.display = 'inline';
+    spbutton.style.display = 'inline';
+    wbutton.style.display = 'inline';
 
     resetScore();
     resetChoosen();
@@ -189,6 +201,8 @@ function displayChoices(pAnswer,cAnswer){
 function displayRules(){
     alert(`
     -------RULES--------
+    ------Level 1-------
+    ------Level 2-------
     1.Scissors cuts Paper
     2.Paper covers Rock
     3.Rock crushes Lizard
@@ -198,5 +212,8 @@ function displayRules(){
     7.Lizard eats Paper
     8.Paper disproves Spock
     9.Spock vaporizes Rock
-    10.Rock crushes Scissors`)
+    10.Rock crushes Scissors
+    ------Level 3-------
+    `)
+    
 }
