@@ -117,6 +117,21 @@ li{
 #spock{
     display: none;
 }
+#sponge{
+    display: none;
+}
+
+#water{
+    display: none;
+}
+
+#fire{
+    display: none;
+}
+
+#air{
+    display: none;
+}
 
 /*Score */
 #scoreOptions{

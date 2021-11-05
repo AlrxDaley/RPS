@@ -1,13 +1,13 @@
 var results = {
-    "12":{"win":false},"13":{"win":true},"14":{"win":true},"15":{"win":false},
-    "21":{"win":true},"23":{"win":false},"24":{"win":false},"25":{"win":true},
-    "31":{"win":false},"32":{"win":true},"34":{"win":true},"35":{"win":false},
+    "12":{"win":false},"13":{"win":true},"14":{"win":true},"15":{"win":false},"16":{"win":true},"17":{"win":false},"18":{"win":false},"19":{"win":false},
+    "21":{"win":true},"23":{"win":false},"24":{"win":false},"25":{"win":true},"26":{"win":false},"27":{"win":false},"28":{"win":false},"29":{"win":false},
+    "31":{"win":false},"32":{"win":true},"34":{"win":true},"35":{"win":false},"36":{"win":false},"37":{"win":false},"38":{"win":false},"39":{"win":false},
     "41":{"win":false},"42":{"win":true},"43":{"win":false},"45":{"win":true},
     "51":{"win":true},"52":{"win":false},"53":{"win":true},"54":{"win":false},
-};
+}
 
 var gameOptions = {
-    '1': "Rock", "2":"Paper", "3":"Scissors", "4":"Lizard", "5":"Spock"
+    '1': "Rock", "2":"Paper", "3":"Scissors", "4":"Lizard", "5":"Spock" ,"6":"Sponge", "7":"Water", "8":"Air", "9":"Fire"
 };
 
 var dificulty = 3 ;
@@ -79,6 +79,17 @@ function createButtonWhenLevelChangedTo1(){
     sbutton.style.display = 'none';
     lbutton.style.display = 'none';
 
+    var abutton = document.getElementById("air")
+    var spbutton = document.getElementById("sponge")
+    var wbutton = document.getElementById("water")
+    var fbutton = document.getElementById("fire")
+
+
+    abutton.style.display = 'none';
+    spbutton.style.display = 'none';
+    wbutton.style.display = 'none';
+    fbutton.style.display = 'none';
+
     resetScore();
     resetChoosen();
 
@@ -96,6 +107,17 @@ function createButtonWhenLevelChangedTo2(){
 
     lbutton.style.display = 'inline';
     sbutton.style.display = 'inline';
+
+    var abutton = document.getElementById("air")
+    var spbutton = document.getElementById("sponge")
+    var wbutton = document.getElementById("water")
+    var fbutton = document.getElementById("fire")
+
+
+    abutton.style.display = 'none';
+    spbutton.style.display = 'none';
+    wbutton.style.display = 'none';
+    fbutton.style.display = 'none';
 
     resetScore();
     resetChoosen();
@@ -122,6 +144,7 @@ function createButtonWhenLevelChangedTo3(){
     abutton.style.display = 'inline';
     spbutton.style.display = 'inline';
     wbutton.style.display = 'inline';
+    fbutton.style.display = 'inline';
 
     resetScore();
     resetChoosen();
@@ -185,6 +208,7 @@ function resetChoosen(){
  */
 function displayChoices(pAnswer,cAnswer){
     if(pAnswer in gameOptions){
+        console.log("true")
         var playersChoice = gameOptions[pAnswer];
         console.log(playersChoice);
         document.getElementById("playerChoice").innerText = playersChoice;
