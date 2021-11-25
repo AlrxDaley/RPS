@@ -380,6 +380,10 @@ function resetAll() {
   computersChoice = "";
   document.getElementById("computerChoice").innerText = computersChoice;
   document.getElementById("winner").innerText = "";
+  element = document.getElementsByClassName("playerBoxed");
+  element[0].style.backgroundColor = "white";
+  element = document.getElementsByClassName("computerBoxed");
+  element[0].style.backgroundColor = "white";
 }
 
 /**
