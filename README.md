@@ -109,6 +109,13 @@ Responsivity testing
 ## Responsivity
 - when dealing with responsivity the first time i took the aproach of having lots if different media queries for each screen size, after testing and consulting with the test group i found this way to be long and not effective at all. so to fix the problem i went back throuhg my code and changed the structure of my css and html to better suit responsivity. after a few trial and errors i was able to get the reponsivity working so i went back the the test group and consulted with them and let them test it, they reported it was a major improvement to the first attempt and works as it should.
 
+# Bugs
+- a bug/oversight i found was that my website was not fully responsive with the media queries i had put in place.
+  - to fix this bug/mistake i went back over some course material about css and used the auto features on the margin and padding which aloud me to make the website fully responive.
+
+- when playing with the added button in level three the computer was still able to select lizard and spock even though they wern't options in that level
+  - to fix this bug i added a dictionary with all the game options numbered 1 - 9. i then created another dictionary holding the three levels of difficulty which each had a list as the value. when each level is selected it takes the key for its spesific list and lets the player and computer select a game option that is within its list.
+
 # Validator Testing.
 
 ## HTML
