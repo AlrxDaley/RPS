@@ -327,7 +327,8 @@ function createButtonWhenLevelChangedTo3() {
  * the inner text of the element.
  */
 function increasePlayerScore() {
-  ++playerScore;
+  playerScore += 1;
+  document.getElementById("winner").innerText = "Player";
   document.getElementById("pscore").innerText = playerScore;
 }
 
@@ -336,7 +337,8 @@ function increasePlayerScore() {
  * the inner text of the element.
  */
 function increaseComputerScore() {
-  ++computerScore;
+  computerScore += 1;
+  document.getElementById("winner").innerText = "Computer";
   document.getElementById("cscore").innerText = computerScore;
 }
 
@@ -345,7 +347,8 @@ function increaseComputerScore() {
  * the inner text of the element.
  */
 function increaseDrawScore() {
-  ++drawScore;
+  drawScore += 1;
+  document.getElementById("winner").innerText = "Nobody";
   document.getElementById("dscore").innerText = drawScore;
 }
 

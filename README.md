@@ -5,7 +5,7 @@ RPS is a web based rock paper scissors game. I created the game in such a way to
 ## Purpose
 
 The purpose of this website was to allow people to play rock paper scissors agaisnt a computer with increasing difficulty depending on the level selected.
-the value to the user is that is it simple and intuitive and allows all ages play rock paper scissors online against the computer.
+the value to the user is that is it simple and intuitive and allows all ages play rock paper scissors against the computer.
 
 ### Possible Scenarios for user value
 
@@ -65,6 +65,9 @@ able to play for however long you want and when you want.
 - In the future i would like to add s system where you only get a certain amount of tries and who ever has the most points wins overall.
 
 # WireFrames.
+
+With regards to the differences between the initial wire frames and the overall look of the website, i changed and added details that 
+i thought would be benifical to the flow of information and the overall UX design of the website.
 
 ![WireFrame section](assets/images/wireframe1.png)
 
