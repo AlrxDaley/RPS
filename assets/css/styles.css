@@ -74,7 +74,17 @@ li {
   display: inline-block;
 }
 
-.boxed {
+.playerBoxed {
+  width: 200px;
+  border: solid black 2px;
+  height: 40px;
+  text-align: left;
+  border-radius: 5px;
+  float: left;
+  margin-top: 5px;
+  background-color: white;
+}
+.computerBoxed {
   width: 200px;
   border: solid black 2px;
   height: 40px;

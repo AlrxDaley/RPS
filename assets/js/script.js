@@ -319,12 +319,24 @@ function createButtonWhenLevelChangedTo3() {
   resetAll();
 }
 
+function changeBackgroundColour(className, i) {
+  if (i == 1) {
+    element = document.getElementsByClassName(className);
+    element[0].style.backgroundColor = "#b2ff59";
+  }else if (i == 2){
+    element = document.getElementsByClassName(className);
+    element[0].style.backgroundColor = "#ff4f4b";
+  }
+}
+
 /**
  * Adds 1 to the player score var and then assigns the var to
  * the inner text of the element.
  */
 function increasePlayerScore() {
   playerScore += 1;
+  changeBackgroundColour("computerBoxed", 2);
+  changeBackgroundColour("playerBoxed", 1);
   document.getElementById("winner").innerText = "Player Wins!";
   document.getElementById("pscore").innerText = playerScore;
 }
@@ -335,6 +347,8 @@ function increasePlayerScore() {
  */
 function increaseComputerScore() {
   computerScore += 1;
+  changeBackgroundColour("computerBoxed", 1);
+  changeBackgroundColour("playerBoxed", 2);
   document.getElementById("winner").innerText = "Computer Wins!";
   document.getElementById("cscore").innerText = computerScore;
 }
@@ -345,6 +359,8 @@ function increaseComputerScore() {
  */
 function increaseDrawScore() {
   drawScore += 1;
+  changeBackgroundColour("computerBoxed", 2);
+  changeBackgroundColour("playerBoxed", 2);
   document.getElementById("winner").innerText = "Its a Draw!";
   document.getElementById("dscore").innerText = drawScore;
 }
