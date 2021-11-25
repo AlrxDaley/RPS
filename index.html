@@ -1,80 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
     <title>Rock Paper Scissors</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="titleContainer">
-        <h1 id="mainTitle">Rock - Paper - Scissors - Lizard - Spock</h1>
+      <h1 id="mainTitle">Rock - Paper - Scissors - Lizard - Spock</h1>
     </div>
     <div id="mainLevelContainer">
-        <ul>
-            <li><button class="levelButtons" onclick="dificultySelector(3),createButtonWhenLevelChangedTo1()">Level
-                    1</button></li>
-            <li><button class="levelButtons" onclick="dificultySelector(4),createButtonWhenLevelChangedTo2()">Level
-                    2</button></li>
-            <li><button class="levelButtons" onclick="dificultySelector(5),createButtonWhenLevelChangedTo3()">Level
-                    3</button></li>
-        </ul>
+      <ul>
+        <li>
+          <button
+            class="levelButtons"
+            onclick="dificultySelector(3),createButtonWhenLevelChangedTo1()"
+          >
+            Level 1
+          </button>
+        </li>
+        <li>
+          <button
+            class="levelButtons"
+            onclick="dificultySelector(4),createButtonWhenLevelChangedTo2()"
+          >
+            Level 2
+          </button>
+        </li>
+        <li>
+          <button
+            class="levelButtons"
+            onclick="dificultySelector(5),createButtonWhenLevelChangedTo3()"
+          >
+            Level 3
+          </button>
+        </li>
+      </ul>
     </div>
 
     <div id="choose">
-        <h2>Choose Your Object:</h2>
+      <h2>Choose Your Object:</h2>
     </div>
 
     <div id="gameOptions">
-        <button onclick="runGame('1')" class="options">Rock <i class="far fa-hand-rock"></i></button>
+      <button onclick="runGame('1')" class="options">
+        Rock <i class="far fa-hand-rock"></i>
+      </button>
 
-        <button onclick="runGame('2')" class="options">Paper <i class="far fa-hand-paper"></i></button>
+      <button onclick="runGame('2')" class="options">
+        Paper <i class="far fa-hand-paper"></i>
+      </button>
 
-        <button onclick="runGame('3')" class="options">Scissors <i class="far fa-hand-scissors"></i></button>
+      <button onclick="runGame('3')" class="options">
+        Scissors <i class="far fa-hand-scissors"></i>
+      </button>
     </div>
     <div id="extraGameOptions">
-        <button onclick="runGame('4')" id="lizard" class="options">Lizard <i class="far fa-hand-lizard"></i></button>
-        <button onclick="runGame('5')" id="spock" class="options">Spock <i class="far fa-hand-spock"></i></button>
-        <button onclick="runGame('6')" id="sponge" class="options">Sponge <i class="far fa-square"></i></button>
-        <button onclick="runGame('7')" id="water" class="options">Water <i class="fas fa-water"></i></button>
-        <button onclick="runGame('8')" id="air" class="options">Air <i class="fas fa-wind"></i></button>
-        <button onclick="runGame('9')" id="fire" class="options">Fire <i class="fas fa-fire"></i></button>
+      <button onclick="runGame('4')" id="lizard" class="options">
+        Lizard <i class="far fa-hand-lizard"></i>
+      </button>
+      <button onclick="runGame('5')" id="spock" class="options">
+        Spock <i class="far fa-hand-spock"></i>
+      </button>
+      <button onclick="runGame('6')" id="sponge" class="options">
+        Sponge <i class="far fa-square"></i>
+      </button>
+      <button onclick="runGame('7')" id="water" class="options">
+        Water <i class="fas fa-water"></i>
+      </button>
+      <button onclick="runGame('8')" id="air" class="options">
+        Air <i class="fas fa-wind"></i>
+      </button>
+      <button onclick="runGame('9')" id="fire" class="options">
+        Fire <i class="fas fa-fire"></i>
+      </button>
     </div>
 
     <div id="choiceMenu">
-        <ul>
-            <li>
-                <div class="boxed">
-                    <p>You picked: <span id="playerChoice"></span></p>
-                </div>
-            </li>
-            <li>
-                <div class="boxed">
-                    <p>Computer picked: <span id="computerChoice"></span></p>
-                </div>
-            </li>
-        </ul>
-
-
+      <ul>
+        <li>
+          <div class="boxed">
+            <p>You picked: <span id="playerChoice"></span></p>
+          </div>
+        </li>
+        <li>
+          <div class="boxed">
+            <p>Computer picked: <span id="computerChoice"></span></p>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <div id="scoreOptions">
-        <p class="scoreCounter">Player Score: <span id="pscore">0</span></p>
-        <p class="scoreCounter">Computer Score: <span id="cscore">0</span></p>
-        <p class="scoreCounter">Draw Score: <span id="dscore">0</span></p>
+      <p class="scoreCounter">Player Score: <span id="pscore">0</span></p>
+      <p class="scoreCounter">Computer Score: <span id="cscore">0</span></p>
+      <p class="scoreCounter">Draw Score: <span id="dscore">0</span></p>
     </div>
 
     <div id="rulesContainer">
-        <button onclick="displayRules()" id="rulesButton">Rules</button>
+      <button onclick="displayRules()" id="rulesButton">Rules</button>
     </div>
 
     <script src="assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/c7dbda0798.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

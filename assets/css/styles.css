@@ -1,167 +1,166 @@
 /* General css */
-html{
-    width: 100%;
-    height:100% ;
-    padding: 0;
-    margin: 0;
-    background: linear-gradient(rgb(198, 241, 255), rgb(95, 168, 192)) no-repeat center center fixed;
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(rgb(198, 241, 255), rgb(95, 168, 192)) no-repeat
+    center center fixed;
 }
-p{
-    margin-left: 20px;
-    margin-top: 11px;
+p {
+  margin-left: 20px;
+  margin-top: 11px;
 }
-ul{
-    margin-left: -40px;
+ul {
+  margin-left: -40px;
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 
 /* Title css */
-#titleContainer{
-    width: 100%;
-    margin: auto;
+#titleContainer {
+  width: 100%;
+  margin: auto;
 }
 
 #mainTitle {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 50px;
-    text-decoration: underline;
-    text-shadow: 2px 2px 5px white;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50px;
+  text-decoration: underline;
+  text-shadow: 2px 2px 5px white;
 }
 /*Level select buttons*/
-#mainLevelContainer{
-    text-align: center;
-    flex-direction: column-reverse;
+#mainLevelContainer {
+  text-align: center;
+  flex-direction: column-reverse;
 }
 
-#mainLevelContainer li{
-    display: inline-block;
+#mainLevelContainer li {
+  display: inline-block;
 }
 
-.levelButtons{
-    padding: 20px;
-    margin-top: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-size: 30px;
-    border-radius: 5px;
-    color: black;
+.levelButtons {
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 30px;
+  border-radius: 5px;
+  color: black;
 }
 
-.levelButtons:hover{
-    background-color:lightslategray;
-    color:black;
+.levelButtons:hover {
+  background-color: lightslategray;
+  color: black;
 }
 /* choose your object */
-#choose{
-    clear: both;
-    margin: 0 auto;
-    text-align: center;
+#choose {
+  clear: both;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /*Choosen option display*/
-#choiceMenu{
-    clear: both;
-    margin: 0 auto;
-    text-align: center;
-    
+#choiceMenu {
+  clear: both;
+  margin: 0 auto;
+  text-align: center;
 }
-#choiceMenu li{
-    display: inline-block;
+#choiceMenu li {
+  display: inline-block;
 }
 
-.boxed{
-    width: 200px;
-    border: solid black 2px;
-    height: 40px;
-    text-align: left;
-    border-radius: 5px;
-    float: left;
-    margin-top:5px;
-    background-color: white;
+.boxed {
+  width: 200px;
+  border: solid black 2px;
+  height: 40px;
+  text-align: left;
+  border-radius: 5px;
+  float: left;
+  margin-top: 5px;
+  background-color: white;
 }
 
 /* object/option Selection */
-#gameOptions{
-    margin-left: 0 auto;
-    text-align: center;
+#gameOptions {
+  margin-left: 0 auto;
+  text-align: center;
 }
 
-#extraGameOptions{
-    margin: 0 auto;
-    text-align: center;
+#extraGameOptions {
+  margin: 0 auto;
+  text-align: center;
 }
 
-.options{
-    width: 200px;
-    padding: 20px;
-    margin-top:10px ;
-    font-size: 30px;
-    display: inline;
-    border-radius: 5px;
-    color: black;
+.options {
+  width: 200px;
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 30px;
+  display: inline;
+  border-radius: 5px;
+  color: black;
 }
 
-.options:hover{
-    background-color: lightslategray;
-    color: black;
+.options:hover {
+  background-color: lightslategray;
+  color: black;
 }
 
-#lizard{
-    display: none;
+#lizard {
+  display: none;
 }
-#spock{
-    display: none;
+#spock {
+  display: none;
 }
-#sponge{
-    display: none;
-}
-
-#water{
-    display: none;
+#sponge {
+  display: none;
 }
 
-#fire{
-    display: none;
+#water {
+  display: none;
 }
 
-#air{
-    display: none;
+#fire {
+  display: none;
+}
+
+#air {
+  display: none;
 }
 
 /*Score */
-#scoreOptions{
-    text-align: center;
+#scoreOptions {
+  text-align: center;
 }
 
-.scoreCounter{
-    width: 210px;
-    height: 30px;
-    font-size: 25px;
-    display: inline-block;
-    margin-top: 36px;
-    margin-left: 0px;
+.scoreCounter {
+  width: 210px;
+  height: 30px;
+  font-size: 25px;
+  display: inline-block;
+  margin-top: 36px;
+  margin-left: 0px;
 }
 /*Rules button*/
-#rulesContainer{
-    text-align: center;
+#rulesContainer {
+  text-align: center;
 }
 
-#rulesButton{
-    display: inline-block;
-    font-size: 20px;
-    width: 200px;
-    color: black;
+#rulesButton {
+  display: inline-block;
+  font-size: 20px;
+  width: 200px;
+  color: black;
 }
 
 /* Media Queires */
-@media screen and (max-width:280px) {
-    #mainTitle{
-        font-size: 40px;
-    }
-    
+@media screen and (max-width: 280px) {
+  #mainTitle {
+    font-size: 40px;
+  }
 }
