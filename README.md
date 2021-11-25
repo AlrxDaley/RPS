@@ -16,7 +16,7 @@ able to play for however long you want and when you want.
 
 - You could love to play rps but all your friends cheat and dont play properly, whit this rock paper scissors website the computer you play agaisnt is incapable of cheating and every level is balanced and is all relient on chance.
 
-
+I think that my website has value for the user due to it being simple but also intuitive and easy to follow / pla
 
 ![Responsive Screenshot](assets/images/responsivity.png)
 

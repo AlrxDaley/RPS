@@ -267,8 +267,7 @@ function createButtonWhenLevelChangedTo1() {
   wbutton.style.display = "none";
   fbutton.style.display = "none";
 
-  resetScore();
-  resetChoosen();
+  resetAll();
 }
 
 /**
@@ -293,8 +292,7 @@ function createButtonWhenLevelChangedTo2() {
   wbutton.style.display = "none";
   fbutton.style.display = "none";
 
-  resetScore();
-  resetChoosen();
+  resetAll();
 }
 
 /**
@@ -318,8 +316,7 @@ function createButtonWhenLevelChangedTo3() {
   wbutton.style.display = "inline";
   fbutton.style.display = "inline";
 
-  resetScore();
-  resetChoosen();
+  resetAll();
 }
 
 /**
@@ -328,7 +325,7 @@ function createButtonWhenLevelChangedTo3() {
  */
 function increasePlayerScore() {
   playerScore += 1;
-  document.getElementById("winner").innerText = "Player";
+  document.getElementById("winner").innerText = "Player Wins!";
   document.getElementById("pscore").innerText = playerScore;
 }
 
@@ -338,7 +335,7 @@ function increasePlayerScore() {
  */
 function increaseComputerScore() {
   computerScore += 1;
-  document.getElementById("winner").innerText = "Computer";
+  document.getElementById("winner").innerText = "Computer Wins!";
   document.getElementById("cscore").innerText = computerScore;
 }
 
@@ -348,28 +345,25 @@ function increaseComputerScore() {
  */
 function increaseDrawScore() {
   drawScore += 1;
-  document.getElementById("winner").innerText = "Nobody";
+  document.getElementById("winner").innerText = "Its a Draw!";
   document.getElementById("dscore").innerText = drawScore;
 }
 
 /**
  * resets all the global variables to 0 and then assigns them to the elements.
  */
-function resetScore() {
+function resetAll() {
   playerScore = 0;
   document.getElementById("pscore").innerText = playerScore;
   computerScore = 0;
   document.getElementById("cscore").innerText = computerScore;
   drawScore = 0;
   document.getElementById("dscore").innerText = drawScore;
-}
-
-function resetChoosen() {
   playersChoice = "";
   document.getElementById("playerChoice").innerText = playersChoice;
-
   computersChoice = "";
   document.getElementById("computerChoice").innerText = computersChoice;
+  document.getElementById("winner").innerText = "";
 }
 
 /**
