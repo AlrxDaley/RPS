@@ -91,6 +91,12 @@ Usibility Test
 Responsivity testing
   - This stage was sort of the same / mixed with the pervious stage as it was having people test the web page on different devices and report what they found out.
 
+## Testing guidlines
+- Make sure webpage is compatiable with smarthpone devices
+- Ensure the site is simple and easy to navigate
+- Ensure buttons are large enough to be seen and clicked on
+- Optimize image sizes and object sizes with regards to responsivity
+
 ## Heading/Title
 - The intended use of the title was to give the user an idea of what the games about, i confimred that it gave the right impression by asking a group of people to describe what the game was about after seeing the title and all of there answers were similar and what i had intended.
 
